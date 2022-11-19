@@ -10,14 +10,13 @@ app.use(express.json())
 
 app.use(cors())
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 const URL = process.env.MONGODB_URL;
+
 
 //Book management - Senal
 const Book = require("./controller/BookController");
 app.use("/api", Book);
-
-
 
 
 mongoose.connect(URL).then(()=> {
