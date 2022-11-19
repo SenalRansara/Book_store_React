@@ -25,4 +25,4 @@ sudo chmod -R 755 .
 #install node module
 npm install
 # start the app
-npm start
+node app.js > app.out.log 2> app.err.log < /dev/null &
