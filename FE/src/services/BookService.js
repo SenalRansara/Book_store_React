@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const HOST = "http://localhost:8000/api";
+const HOST = "54.173.133.134:8000/api";
 
 //calling the backend of API Methods as services
 

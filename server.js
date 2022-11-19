@@ -17,8 +17,6 @@ const URL = process.env.MONGODB_URL;
 const Book = require("./controller/BookController");
 app.use("/api", Book);
 
-const loginRouter = require("./controller/Login.js");
-app.use("/login", loginRouter);
 
 
 
@@ -30,3 +28,11 @@ mongoose.connect(URL).then(()=> {
 app.listen(PORT,()=>{
     console.log(`App is running on ${PORT}`);
 });
+
+
+app.get('/', (req, res) => {
+  res.send('<h1>Book store App Backend is Successfully connected </h1> <h4>Message: Success</h4> <p>Version: 1.0.0</p>');
+})
+
+
+
